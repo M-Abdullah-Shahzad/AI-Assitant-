@@ -707,10 +707,6 @@
             {
               "name": "Content-Type",
               "value": "application/json"
-            },
-            {
-              "name": "Authorization",
-              "value": "Bearer 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"
             }
           ]
         },
@@ -718,7 +714,9 @@
         "contentType": "raw",
         "rawContentType": "application/json",
         "body": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"temperature\": 0.7,\n  \"max_tokens\": 500,\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are an AI assistant that generates WhatsApp notification messages for Google Calendar events. Match tone to event type: Meeting/Interview = professional 💼, Deadline = urgent ⚠️, Birthday/Social = friendly 🎉, Training = motivational 📚. If urgency is High start with ⚠️ URGENT. Keep under 300 words. Output only the WhatsApp message.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Generate a WhatsApp notification for:\\nTitle: {{ $('Extract & Analyze Event').item.json.title }}\\nType: {{ $('Extract & Analyze Event').item.json.eventType }}\\nUrgency: {{ $('Extract & Analyze Event').item.json.urgency }}\\nStart: {{ $('Extract & Analyze Event').item.json.startFmt }}\\nEnd: {{ $('Extract & Analyze Event').item.json.endFmt }}\\nLocation: {{ $('Extract & Analyze Event').item.json.location }}\\nOrganizer: {{ $('Extract & Analyze Event').item.json.organizer }}\\nDescription: {{ $('Extract & Analyze Event').item.json.description }}\\nLanguage: {{ $('Extract & Analyze Event').item.json.language }}\"\n    }\n  ]\n}",
-        "options": {}
+        "options": {},
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth"
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
