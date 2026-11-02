@@ -44,6 +44,7 @@ The workflow consists of 5 phases:
 ### Credentials to Configure
 - Google Calendar API credentials.
 - WhatsApp API credentials for sending messages.
+- A Groq API key stored in an n8n **Header Auth** credential. Set the header name to `Authorization` and the value to `Bearer YOUR_GROQ_API_KEY`, then select that credential on the **HTTP Request** node after importing the workflow. Never paste API keys directly into workflow JSON or commit them to GitHub.
 
 ## Docker Installation Steps
 1. Install Docker from the [official website](https://www.docker.com/get-started).
