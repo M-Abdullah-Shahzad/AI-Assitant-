@@ -1,0 +1,26 @@
+# Local Python environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+token.json
+secrets/
+secrets.*
+
+# Local exports and logs
+*.log
+logs/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
